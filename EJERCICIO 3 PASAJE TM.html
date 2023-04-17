@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASAJE TM</title>
+</head>
+<body>
+    <center>
+        <img src="./Nueva carpeta/IMG/LOGO TRASMI.png" alt="" width="150px" height="150px">
+        <h2>INGRESO / SALDO TARJETA DE TRANSMILENO </h2>
+        <SCript>
+            //Programa que permita capturar el saldo de su tarjeta de Transmilenio para ingresar al sistema, luego validar su ingreso –recuerde que el pasaje de TM es $2.650. Enviar mensajes respectivos dependiendo la validación de sistema//
+            let saldo;
+            const tm=2950;
+            //Entrada
+            saldo=parseInt(prompt("ingrese saldo de su tarjeta TM"));
+            //proceso aplicacion de estructura de control condicional SI basico. 
+            if (saldo-tm) {
+                swal("estimado usuario", "ingrese a trasmilenio","success");
+            }else{
+                swal("estimado usuario", "saldo insuficiente: Recargue tarjeta TM","error");
+            }
+
+        </SCript>
+    </center>
+</body>
+</html>

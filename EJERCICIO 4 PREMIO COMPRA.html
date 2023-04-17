@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREMIO COMPRA</title>
+</head>
+<body>
+    <center>
+    <h2>PREMIO SORPRESA POR COMPRAS</h2>
+    <SCript>
+        //Programa que permita capturar el nombre de un producto, su precio unitario y su cantidad, luego calcular total a pagar, muéstrelo por un mensaje de alerta al usuario, luego permita la captura de la forma de pago (Efectivo, Nequi o Tarjeta de crédito) y validar promoción de aniversario si paga en efectivo y por compras desde $50.0000 se le obsequia un taco de galletas sino una chocolatina, finalmente enviar mensaje Gracias por su compra//
+
+        const SPeso = new Intl.NumberFormat('es-CO', {
+       style: 'currency',
+       currency: 'COP',
+       minimumFractionDigits: 0
+     });
+        //ENtrada 
+        producto=prompt("ingrese nombre producto")
+        precio=parseInt(prompt("ingrese precio producto"));
+        cantidad=parseInt(prompt("ingrese cantidad a comprar"))
+        fpago=parseFloat(prompt("ingrese forma de pago [1-efectivo 2-nequi 3-tarjeta credito]"));
+        //proceso 
+        total=cantidad*precio;
+        //salida
+        alert("su valor a pagar es....."+SPeso.format(total));
+        document.write("******************"+"<br>");
+        document.write("producto comprado..."+ producto+ " &nbsp&nbsp"+ "precio prodcuto.."+ SPeso.format(precio)+" &nbsp&nbsp"+"cantodad comprada.."+cantidad+"<br>"+"<br>");
+        document.write("su valor a pago es .."+SPeso.format(total)+"<br>");
+        //definicion de condicional si segun fpago efectivo y ventas >=50000
+        if (fpago=-1 && total>=50000){
+            document.write("OBsequio sorpresa... TACO GALLETA"+"<br>");
+
+        }else{
+    alert("Reciba su obsequio sorpresa.. Chocolatina");
+    document.write("Obsequio sorpresa... Chocolatina"+"<br>");
+}
+document.write("Gracias por su compra..."+"<br>");
+document.write("******************************************************");
+
+
+</SCript>
+</center>
+</body>
+</html>
