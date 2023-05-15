@@ -1,0 +1,20 @@
+function Buscar() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("datos");//DATO INGRESADO AL BUSCADOR
+    filter = input.value.toUpperCase();//CONVIERTE TEXTO A MAYUSCULA 
+    table = document.getElementById("tablaDatos");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {//BUSQUEDA DE FILA X FILA Y COLUMNA 0=
+      td = tr[i].getElementsByTagName("td")[0];//NOMBRE DE LA PELICULA lera columna
+      if (td) {
+        txtValue = td.textContent || td.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {//asi se encuentra nombre 
+          tr[i].style.display = "";
+          } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
+  }
+      
+  
